@@ -1,8 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import Container from '@mui/material/Container';
 import Header from "../components/header"
+import SingleCard from '@/components/singleCard';
+import Grid from '@mui/material/Grid';
+
+const testCardNum = [1,2,3,4,5,6,7,8,8,8,8,8,8]
 
 export default function Home() {
   return (
@@ -14,8 +16,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Header></Header>
-      <Container maxWidth="xl" style={{'padding': "20px"}}>
-        TEST
+      <Container maxWidth="xl" style={{ 'padding': "20px" }}>
+        <Grid container spacing={2}>
+          {
+            testCardNum.map((item, i) => {
+              return <Grid item><SingleCard key={i}></SingleCard></Grid>
+            })
+          } 
+        </Grid>
       </Container>
     </>
   )

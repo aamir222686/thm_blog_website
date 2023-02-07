@@ -1,12 +1,33 @@
 import Head from 'next/head'
 import Container from '@mui/material/Container';
-import Header from "../components/header"
+import Header from "../components/header";
 import SingleCard from '@/components/singleCard';
 import Grid from '@mui/material/Grid';
+import { useState, useEffect } from 'react';
+import LoadingContentSpinner from '../components/LoadingContentSpinner';
 
-const testCardNum = [1,2,3,4,5,6,7,8,8,8,8,8,8]
 
 export default function Home() {
+  const [posts, setPosts] = useState([]);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  
+  useEffect(() => {
+    const fetchPostData = async () => {
+            setLoading(true)
+            const res = await fetch(`https://cors-anywhere-server.fly.dev/https://thm-backend-server.fly.dev/getPostsByCount?count=${12}`)
+            if (res.status == 200) {
+              let data = await res.json()
+              setPosts(data)
+              setLoading(false)
+            } else {
+              setError("Hmmmm...!!! Something went wrong....")
+              setLoading(false)
+            }
+        };
+        fetchPostData();
+    }, [])
+
   return (
     <>
       <Head>
@@ -17,13 +38,16 @@ export default function Home() {
       </Head>
       <Header></Header>
       <Container maxWidth="xl" style={{ 'padding': "20px" }}>
-        <Grid container spacing={2}>
+        {!loading ? <>
+           {error.length < 1 ?
+          <Grid container spacing={3}>
           {
-            testCardNum.map((item, i) => {
-              return <Grid item><SingleCard key={i}></SingleCard></Grid>
+            posts.map((post, i) => {
+              return <Grid key={i} item xs={12} md={4}><SingleCard post={post}></SingleCard></Grid>
             })
           } 
-        </Grid>
+        </Grid> : error}
+        </>: <LoadingContentSpinner/>}
       </Container>
     </>
   )

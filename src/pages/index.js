@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPostData = async () => {
             setLoading(true)
-            const res = await fetch(`https://cors-anywhere-server.fly.dev/https://thm-backend-server.fly.dev/getPostsByCount?count=${12}`)
+            const res = await fetch(`https://thm-backend-server.fly.dev/getPostsByCount?count=${12}`)
             if (res.status == 200) {
               let data = await res.json()
               setPosts(data)

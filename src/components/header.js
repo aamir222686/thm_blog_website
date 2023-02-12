@@ -81,9 +81,9 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link href={`/${page == "Blog"? "/" : page}`}><Typography textAlign="center">{page}</Typography></Link>
+              {pages.map((page, i) => (
+                <MenuItem key={i} onClick={handleCloseNavMenu}>
+                  <Link href={`${page == "Blog"? "/" : page}`}><Typography textAlign="center">{page}</Typography></Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -110,8 +110,8 @@ function ResponsiveAppBar() {
             THM
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} justifyContent={'flex-end'}>
-            {pages.map((page) => (
-              <Link href={`/${page == "Blog"? "/" : page}`}><Button
+            {pages.map((page, i) => (
+              <Link key={i} href={`${page == "Blog"? "/" : page}`}><Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}

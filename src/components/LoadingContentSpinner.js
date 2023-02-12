@@ -6,7 +6,7 @@ function LoadingContentSpinner() {
     return (
         <Grid container style={{ display: "flex", width: "100%", height: "75vh", justifyContent: "center", alignItems: "center" }}>
             <CssVarsProvider>
-                <CircularProgress variant="solid" size="lg" />
+                <CircularProgress variant="solid" size="md" />
             </CssVarsProvider>
         </Grid>
     )

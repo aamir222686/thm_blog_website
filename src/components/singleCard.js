@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import { CardHeader } from '@mui/material';
 import Link from 'next/link';
 
-export default function SingleCard({ post }) {
+export default function SingleCard({ post, clicked }) {
 
   let postedDate = new Date(post.date_added)
 
@@ -18,7 +18,7 @@ export default function SingleCard({ post }) {
     <Card sx={{ minWidth: 275 }} style={{ margin: "20px" }}>
       <CardHeader subheader={`${postedDate.toDateString()}`}>
       </CardHeader>
-      <Link href={`/${post._id}`}>
+      <Link onClick={() => clicked(true)} href={`${post._id}`}>
       <CardMedia
         component="img"
         height="250"
@@ -27,15 +27,16 @@ export default function SingleCard({ post }) {
       />
       </Link>
       <CardContent>
-        <Link href={`/${post._id}`}>
+        <Link onClick={() => clicked(true)} href={`${post._id}`}>
           <Typography variant="h6" color="text.primary">{post.title}</Typography>
+          <Typography variant="body2" color="text.secondary">{post.description}</Typography>
         </Link>  
       </CardContent>
         <CardActions disableSpacing style={{display: "flex", justifyContent: "space-between"}}>
           <IconButton aria-label="share">
             <ShareIcon />
           </IconButton>
-        <Link href={`/${post._id}`}><Button size="small">Read More</Button></Link>
+        <Link onClick={() => clicked(true)} href={`${post._id}`}><Button size="small">Continue Reading...</Button></Link>
       </CardActions>
     </Card>
   );

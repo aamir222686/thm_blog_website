@@ -43,7 +43,7 @@ export default function Home() {
           <Grid container spacing={3}>
           {
             posts.map((post, i) => {
-              return <Grid key={i} item xs={12} md={4}><SingleCard post={post}></SingleCard></Grid>
+              return <Grid key={i} item xs={12} md={4}><SingleCard clicked={(e) => setLoading(e)} post={post}></SingleCard></Grid>
             })
           } 
         </Grid> : error}

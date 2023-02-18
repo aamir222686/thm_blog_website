@@ -22,7 +22,7 @@ export default function SingleCard({ post, clicked }) {
       <CardMedia
         component="img"
         height="250"
-        image={`data:image/png;base64,${post.image}`}
+        image={`${post.image}`}
         alt="THM Blog Image"
       />
       </Link>

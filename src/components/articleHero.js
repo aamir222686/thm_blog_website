@@ -37,7 +37,7 @@ function ArticleHero({ image, title, date, author, articleId }) {
                 <Grid item xs={12} md={6} sx={{
                     display: "flex",
                     justifyContent: "center",
-                    backgroundImage: `url(data:image/png;base64,${image})`,
+                    backgroundImage: `url(${image})`,
                     minHeight: "512px",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",

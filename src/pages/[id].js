@@ -4,7 +4,7 @@ import { Grid } from '@mui/material';
 
 // components import
 import Header from "../components/header";
-import LoadingContentSpinner from "../components/loadingContentSpinner";
+import LoadingContentSpinner from "../components/LoadingContentSpinner";
 import ArticleHero from "../components/articleHero";
 import ArticleSideMenu from '../components/articleSideMenu';
 

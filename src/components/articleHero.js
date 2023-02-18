@@ -7,7 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import ShareIcon from '@mui/icons-material/Share';
 import { useEffect } from 'react';
 
-function ArticleHero({ image, title, date, author, id }) {
+function ArticleHero({ image, title, date, author, articleId }) {
     let postedDate = new Date(date)
 
     useEffect(() => {
@@ -15,7 +15,7 @@ function ArticleHero({ image, title, date, author, id }) {
             const res = await fetch(`https://thm-backend-server.fly.dev/updateViewCount`, {
                 method: "POST",
                 body: JSON.stringify({
-                    "id" : id
+                    "id" : articleId
                 })
             })
                     if (res.status == 200) {

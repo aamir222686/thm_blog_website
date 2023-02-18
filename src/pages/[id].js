@@ -41,7 +41,7 @@ const SingleBlog = (props) => {
             {dataFromSsr && dataFromSsr.length > 0 ? 
                 <Container maxWidth="xl" style={{ 'padding': "20px" }}>
                     <Grid container >
-                        <ArticleHero image={dataFromSsr[0].image} title={dataFromSsr[0].title} date={ dataFromSsr[0].date_added} author={ dataFromSsr[0].author} id={dataFromSsr[0]._id}  />
+                        <ArticleHero image={dataFromSsr[0].image} title={dataFromSsr[0].title} date={ dataFromSsr[0].date_added} author={ dataFromSsr[0].author} articleId={dataFromSsr[0]._id}  />
                     </Grid>
                     <Grid container sx={{ marginTop: "20px" }}>
                         <Grid item xs={12} md={9} sx={{padding: "40px"}}>

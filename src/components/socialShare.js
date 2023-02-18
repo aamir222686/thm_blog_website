@@ -20,6 +20,8 @@ import EmailIcon from '@mui/icons-material/Email';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import Container from '@mui/material/Container';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import Snackbar from '@mui/material/Snackbar';
 
 const style = {
     position: 'absolute',
@@ -43,11 +45,31 @@ export default function ShareModal(props) {
     const url = `${config.seoConfig.host}/${props.postId}`;
     const title = "THM | " + props.title;
 
+    const [snackBar, setSnackBar] = React.useState(false);
+
+    const handleOpenSnackBar = () => {
+        setSnackBar(true);
+    };
+
+    const handleCloseSnackBar = (event, reason) => {
+        if (reason === 'clickaway') {
+        return;
+        }
+
+        setSnackBar(false);
+    };
+
+    const handleCopyText = async () => {
+        await navigator.clipboard.writeText(url);
+        handleOpenSnackBar()
+        props.onClose();
+    }
+
 
     return (
-        <Container>
+        <Container maxWidth="xl">
             <Modal
-                open={ props.open }
+                open={ props.open}
                 onClose={props.onClose}
                 aria-labelledby="thm-share-modal"
                 aria-describedby="thm-share-modal"
@@ -66,27 +88,36 @@ export default function ShareModal(props) {
                     </Box>
                     <Divider sx={{color: "#a0d7d9"}} />
                     <Box sx={{display: "flex", justifyContent: "space-between", marginTop: "10px", width: "100%"}}>
-                        <FacebookShareButton url={url} quote={title} hashtag={'#thm'}>
+                        <FacebookShareButton url={url} quote={title} hashtag={'#thm'} onClick={() => props.onClose()}>
                             <FacebookIcon/>
                         </FacebookShareButton>
-                        <WhatsappShareButton url={url} quote={title} separator=":: ">
+                        <WhatsappShareButton url={url} quote={title} separator=":: " onClick={() => props.onClose()}>
                             <WhatsAppIcon/>
                         </WhatsappShareButton>
-                        <LinkedinShareButton url={url}>
+                        <LinkedinShareButton url={url} onClick={() => props.onClose()}>
                             <LinkedInIcon/>
                         </LinkedinShareButton>
-                        <EmailShareButton url={url} subject={title}>
+                        <EmailShareButton url={url} subject={title} onClick={() => props.onClose()}>
                             <EmailIcon/>
                         </EmailShareButton>
-                        <TwitterShareButton url={url} quote={title}>
+                        <TwitterShareButton url={url} quote={title} onClick={() => props.onClose()}>
                             <TwitterIcon/>
                         </TwitterShareButton>
-                        <TelegramShareButton url={url} quote={title}>
+                        <TelegramShareButton url={url} quote={title} onClick={() => props.onClose()} >
                             <TelegramIcon/>
                         </TelegramShareButton>
+                        <Box onClick={() => handleCopyText()}>
+                            <ContentCopyIcon sx={{cursor: "pointer"}}/>
+                        </Box>
                     </Box>
                 </Box>
             </Modal>
+            <Snackbar open={snackBar} autoHideDuration={1500} onClose={handleCloseSnackBar} sx={{ backgroundColor: "#262b32", width: "250px", padding: "10px", borderRadius: "8px", display: "flex", justifyContent: "center" }}>
+                <Box sx={{display: "flex", alignItems: "center"}}>
+                    <ContentCopyIcon sx={{mr: "10px", fontSize: "1.2rem", color: "#a0d7d9"}}/>
+                    <Typography variant='body1' sx={{fontFamily: 'monospace', fontWeight: 700, color: "white"}}>Copied to Clipboard.</Typography>
+                </Box>
+            </Snackbar>
         </Container>
     );
 }

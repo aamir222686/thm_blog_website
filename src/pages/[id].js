@@ -44,10 +44,10 @@ const SingleBlog = (props) => {
                         <ArticleHero image={dataFromSsr[0].image} title={dataFromSsr[0].title} date={ dataFromSsr[0].date_added} author={ dataFromSsr[0].author} articleId={dataFromSsr[0]._id}  />
                     </Grid>
                     <Grid container sx={{ marginTop: "20px" }}>
-                        <Grid item xs={12} md={9} sx={{padding: "40px"}}>
+                        <Grid item xs={12} md={9} sx={{padding: "20px"}}>
                             <div dangerouslySetInnerHTML={createMarkup()}/>
                         </Grid>
-                        <Grid item xs={12} md={3} sx={{padding: "40px"}}>
+                        <Grid item xs={12} md={3} sx={{padding: "20px"}}>
                             <ArticleSideMenu tags={dataFromSsr[0].keywords} viewCount={dataFromSsr[0].num_of_views}></ArticleSideMenu>
                         </Grid>
                     </Grid>

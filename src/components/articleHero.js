@@ -38,7 +38,7 @@ function ArticleHero({ image, title, date, author, articleId }) {
                     display: "flex",
                     justifyContent: "center",
                     backgroundImage: `url(${image})`,
-                    minHeight: "512px",
+                    minHeight: {"xs": "324px", "md": "512px"},
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"

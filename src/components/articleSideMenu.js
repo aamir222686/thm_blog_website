@@ -29,7 +29,7 @@ function ArticleSideMenu({ tags, viewCount }) {
                     {listTags.map((item, i) => {
                         return <Grid sx={{display: "flex", backgroundColor: "#1A2027", width: "fit-content", margin:"5px", padding: "10px", color: "#a0d7d9", fontFamily: "monospace", cursor: "pointer"}} key={i}>{"#"}{item.toLowerCase()}</Grid>
                     })}
-                </>: <Item>No Tags</Item>}
+                </>: <Grid sx={{display: "flex", flexWrap: "wrap", marginTop: "20px", marginBottom: "20px"}}>No Tags</Grid>}
                 </Grid>
             </Grid>
             <Divider></Divider>

@@ -5,15 +5,6 @@ import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-    color: "#a0d7d9",
-    cursor: "pointer",
-  fontFamily: "monospace"
-}));
-
 const CountView = styled(Paper)(({ theme }) => ({
   backgroundColor: '#a0d7d9',
   padding: theme.spacing(1),
@@ -30,15 +21,17 @@ function ArticleSideMenu({ tags, viewCount }) {
                 borderRadius: "10px",
                 padding: "20px"
         }}>
-            <Stack spacing={3}>
+            <Grid maxWidth="100%" >
                 <Typography variant="h5" color="text.primary">Tags</Typography>
                 <Divider></Divider>
+                <Grid sx={{display: "flex", flexWrap: "wrap", marginTop: "20px", marginBottom: "20px"}}>
                 {listTags.length > 0 ? <>
                     {listTags.map((item, i) => {
-                        return <Item key={i}>{"#"}{item.toLowerCase()}</Item>
+                        return <Grid sx={{display: "flex", backgroundColor: "#1A2027", width: "fit-content", margin:"5px", padding: "10px", color: "#a0d7d9", fontFamily: "monospace", cursor: "pointer"}} key={i}>{"#"}{item.toLowerCase()}</Grid>
                     })}
                 </>: <Item>No Tags</Item>}
-            </Stack>
+                </Grid>
+            </Grid>
             <Divider></Divider>
             <Stack marginTop={5}>
                 <CountView>

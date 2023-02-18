@@ -34,9 +34,9 @@ export default function SingleCard({ post, clicked }) {
       </CardContent>
         <CardActions disableSpacing style={{display: "flex", justifyContent: "space-between"}}>
           <IconButton aria-label="share">
-            <ShareIcon />
+            <ShareIcon sx={{color: "#a0d7d9"}}/>
           </IconButton>
-        <Link onClick={() => clicked(true)} href={`${post._id}`}><Button size="small">Continue Reading...</Button></Link>
+        <Link onClick={() => clicked(true)} href={`${post._id}`}><Button sx={{color: "#a0d7d9"}} size="small">Continue Reading...</Button></Link>
       </CardActions>
     </Card>
   );

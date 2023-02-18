@@ -4,7 +4,7 @@ import Header from "../components/header";
 import SingleCard from '@/components/singleCard';
 import Grid from '@mui/material/Grid';
 import { useState, useEffect } from 'react';
-import LoadingContentSpinner from '../components/LoadingContentSpinner';
+import LoadingContentSpinner from '../components/loadingContentSpinner';
 
 
 export default function Home() {

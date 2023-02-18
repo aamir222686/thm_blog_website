@@ -37,7 +37,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Header></Header>
-      <Container maxWidth="xl" style={{ 'padding': "20px" }}>
+      <Container maxWidth="xl">
         {!loading ? <>
            {error.length < 1 ?
           <Grid container spacing={3}>

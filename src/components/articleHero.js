@@ -41,8 +41,7 @@ function ArticleHero({ image, title, date, author, articleId }) {
                     minHeight: "512px",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    borderRadius: "20px 20px 20px 20px"
+                    backgroundSize: "cover"
                 }}>
                 </Grid>
                 <Grid item xs={12} md={6} sx={{padding: "40px 40px", display: "flex", flexDirection: "column", justifyContent: "center"}}>

@@ -9,7 +9,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Image from 'next/image';
 import headerImage from '../../public/thm-200.png';
 import Link from 'next/link';

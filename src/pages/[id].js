@@ -3,10 +3,10 @@ import Container from '@mui/material/Container';
 import { Grid } from '@mui/material';
 
 // components import
-import Header from "@/components/header";
-import LoadingContentSpinner from '@/components/loadingContentSpinner';
-import ArticleHero from "@/components/articleHero";
-import ArticleSideMenu from '@/components/articleSideMenu';
+import Header from "../components/header";
+import LoadingContentSpinner from '../components/loadingContentSpinner';
+import ArticleHero from "../components/articleHero";
+import ArticleSideMenu from '../components/articleSideMenu';
 
 export async function getServerSideProps(context) {  
     const { id } = context.query;

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Container from '@mui/material/Container';
 import { Grid } from '@mui/material';
-import config from "../seo/config"
+import config from "../seo/config";
 
 // components import
 import Header from "../components/header";

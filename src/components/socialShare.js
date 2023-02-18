@@ -23,6 +23,9 @@ import Container from '@mui/material/Container';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import Snackbar from '@mui/material/Snackbar';
 
+// google analytics
+import { event } from "nextjs-google-analytics";
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -59,12 +62,21 @@ export default function ShareModal(props) {
         setSnackBar(false);
     };
 
+    // Handling google analytics share tracking
+    const handleGoogleEvent = (platform) => {
+        event("share", {
+            category: "Share",
+            label: platform,
+            value: platform
+        });
+    }
+    
     const handleCopyText = async () => {
         await navigator.clipboard.writeText(url);
-        handleOpenSnackBar()
+        handleOpenSnackBar();
+        handleGoogleEvent("clipboard")
         props.onClose();
     }
-
 
     return (
         <Container maxWidth="xl">
@@ -88,22 +100,22 @@ export default function ShareModal(props) {
                     </Box>
                     <Divider sx={{color: "#a0d7d9"}} />
                     <Box sx={{display: "flex", justifyContent: "space-between", marginTop: "10px", width: "100%"}}>
-                        <FacebookShareButton url={url} quote={title} hashtag={'#thm'} onClick={() => props.onClose()}>
+                        <FacebookShareButton url={url} quote={title} hashtag={'#thm'} onClick={() => {props.onClose(); handleGoogleEvent("facebook")}}>
                             <FacebookIcon/>
                         </FacebookShareButton>
-                        <WhatsappShareButton url={url} quote={title} separator=":: " onClick={() => props.onClose()}>
+                        <WhatsappShareButton url={url} quote={title} separator=":: " onClick={() => {props.onClose(); handleGoogleEvent("whatsapp")}}>
                             <WhatsAppIcon/>
                         </WhatsappShareButton>
-                        <LinkedinShareButton url={url} onClick={() => props.onClose()}>
+                        <LinkedinShareButton url={url} onClick={() => {props.onClose(); handleGoogleEvent("linkedin")}}>
                             <LinkedInIcon/>
                         </LinkedinShareButton>
-                        <EmailShareButton url={url} subject={title} onClick={() => props.onClose()}>
+                        <EmailShareButton url={url} subject={title} onClick={() => {props.onClose(); handleGoogleEvent("email")}}>
                             <EmailIcon/>
                         </EmailShareButton>
-                        <TwitterShareButton url={url} quote={title} onClick={() => props.onClose()}>
+                        <TwitterShareButton url={url} quote={title} onClick={() => {props.onClose(); handleGoogleEvent("twitter")}}>
                             <TwitterIcon/>
                         </TwitterShareButton>
-                        <TelegramShareButton url={url} quote={title} onClick={() => props.onClose()} >
+                        <TelegramShareButton url={url} quote={title} onClick={() => {props.onClose(); handleGoogleEvent("telegram")}} >
                             <TelegramIcon/>
                         </TelegramShareButton>
                         <Box onClick={() => handleCopyText()}>

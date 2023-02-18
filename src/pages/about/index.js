@@ -39,7 +39,7 @@ export default function About() {
       <Container maxWidth="xl" sx={{marginTop: 4, marginBottom: 4}}>
         <Grid container spacing={2} sx={{display: "flex", alignItems: "center"}}>
           <Grid item xs={12} sm={12} md={4}>
-            <Image src={AboutImage} width={300} height={300}></Image>
+            <Image src={AboutImage} width={300} height={300} alt="thm logo"></Image>
           </Grid>
           <Grid item xs={12} sm={12} md={8} padding="20px">
             <Typography variant="h4" sx={{marginBottom: 2}}>

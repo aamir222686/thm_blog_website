@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
@@ -5,9 +6,22 @@ import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 import ShareIcon from '@mui/icons-material/Share';
 import { useEffect } from 'react';
+// Share modal import
+import ShareModal from "../components/socialShare";
 
 function ArticleHero({ image, title, date, author, articleId }) {
-    let postedDate = new Date(date)
+    let postedDate = new Date(date);
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        console.log("CLOSE TRIGGERED")
+        setOpen(false);
+    };
 
     useEffect(() => {
         const addCount = async () => {
@@ -51,10 +65,11 @@ function ArticleHero({ image, title, date, author, articleId }) {
                         <Typography variant="body2" color="#a0d7d9">Author: {author.toUpperCase()}</Typography>
                     </Stack>
                     <Stack direction="row" marginTop={4} sx={{ display: "flex", width: "100%", justifyContent: "flex-end" }}>
-                        <IconButton aria-label="share">
+                        <IconButton aria-label="share" onClick={handleOpen}>
                             <ShareIcon />
                         </IconButton>
-                    </Stack>
+                </Stack>
+                <ShareModal postId={articleId} title={title} open={open} onClose={handleClose}/>
                 </Grid>
         </Grid>
     )

@@ -4,7 +4,9 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import InfoIcon from '@mui/icons-material/Info';
 import Header from "../../components/header";
-import config from "../../seo/config"
+import config from "../../seo/config";
+import Image from 'next/image';
+import AboutImage from '../../../public/thm-400.png';
 
 export default function About() {
 
@@ -35,11 +37,11 @@ export default function About() {
       </Head>
       <Header></Header>
       <Container maxWidth="xl" sx={{marginTop: 4, marginBottom: 4}}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={2}>
-            <InfoIcon color="primary" sx={{marginRight: 1, fontSize: 40}}/>
+        <Grid container spacing={2} sx={{display: "flex", alignItems: "center"}}>
+          <Grid item xs={12} sm={12} md={4}>
+            <Image src={AboutImage} width={300} height={300}></Image>
           </Grid>
-          <Grid item xs={12} sm={10}>
+          <Grid item xs={12} sm={12} md={8} padding="20px">
             <Typography variant="h4" sx={{marginBottom: 2}}>
               About The Honest Machine
             </Typography>

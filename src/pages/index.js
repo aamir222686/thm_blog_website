@@ -57,7 +57,10 @@ export default function Home() {
         <meta property="twitter:url" content={`${config.seoConfig.host}` + `${currentRoute.pathname}`}/>
         <meta property="twitter:title" content={`${config.seoConfig.title}`}/>
         <meta property="twitter:description" content={`${config.seoConfig.description}`}/>
-        <meta property="twitter:image" content={`${config.seoConfig.mainBlogLogo}`}/>
+        <meta property="twitter:image" content={`${config.seoConfig.mainBlogLogo}`} />
+        
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="400" />
       </Head>
       <Header></Header>
       <Container maxWidth="xl">

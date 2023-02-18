@@ -41,18 +41,23 @@ const SingleBlog = (props) => {
                 <link rel="canonical" href={config.seoConfig.host + "/" + dataFromSsr[0]._id}></link>
 
                 {/* <!-- Open Graph / Facebook --> */}
-                <meta property="og:type" content="website"/>
+                <meta property="og:type" content="article"/>
                 <meta property="og:url" content={`${config.seoConfig.host}` + `/${dataFromSsr[0]._id}`}/>
                 <meta property="og:title" content={`${dataFromSsr[0].title}`}/>
                 <meta property="og:description" content={`${dataFromSsr[0].description}`}/>
                 <meta property="og:image" content={`${dataFromSsr[0].image}`}/>
+                <meta property="og:image:secure_url" content={`${dataFromSsr[0].image}`}/>
 
                 {/* <!-- Twitter --/> */}
                 <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content={`${config.seoConfig.host}` + `/${dataFromSsr[0]._id}`}/>
                 <meta property="twitter:title" content={`${dataFromSsr[0].title}`}/>
                 <meta property="twitter:description" content={`${dataFromSsr[0].description}`}/>
-                <meta property="twitter:image" content={`${dataFromSsr[0].image}`}/>
+                <meta property="twitter:image" content={`${dataFromSsr[0].image}`} />
+                
+                <meta property="og:image:width" content="512" />
+                <meta property="og:image:height" content="512" />
+                <meta property="og:image:alt" content={`Image For - ${dataFromSsr[0].title}`} />
             </Head>
             <Header></Header>
             {dataFromSsr && dataFromSsr.length > 0 ? 

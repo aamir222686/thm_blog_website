@@ -40,7 +40,7 @@ export default function Home() {
       <Container maxWidth="xl">
         {!loading ? <>
            {error.length < 1 ?
-          <Grid container spacing={3}>
+          <Grid container spacing={2}>
           {
             posts.map((post, i) => {
               return <Grid key={i} item xs={12} md={4}><SingleCard clicked={(e) => setLoading(e)} post={post}></SingleCard></Grid>

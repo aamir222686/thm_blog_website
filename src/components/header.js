@@ -33,11 +33,10 @@ function ResponsiveAppBar() {
                   <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>  
                     <Image style={{marginRight: "10px"}}  src={headerImage} alt="THM Main Logo" width={20}></Image>
                   </Box>
-          <Typography
+          <Link href={"/"}>
+            <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -50,6 +49,7 @@ function ResponsiveAppBar() {
           >
             The Honest Machine
           </Typography>
+          </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -90,24 +90,23 @@ function ResponsiveAppBar() {
                   <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
                     <Image style={{marginRight: "10px"}}  src={headerImage} alt="THM Main Logo" width={20}></Image>
                   </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            THM
-          </Typography>
+          
+              <Typography
+                variant="h5"
+                noWrap
+                sx={{
+                  mr: 2,
+                  display: { xs: 'flex', md: 'none' },
+                  flexGrow: 1,
+                  fontFamily: 'monospace',
+                  fontWeight: 700,
+                  letterSpacing: '.3rem',
+                  color: 'inherit',
+                  textDecoration: 'none',
+                }}
+              >
+                <Link href={"/"}>THM</Link>
+              </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} justifyContent={'flex-end'}>
             {pages.map((page, i) => (
               <Link key={i} href={`${page == "Blog"? "/" : page}`}><Button

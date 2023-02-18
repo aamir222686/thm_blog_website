@@ -15,7 +15,7 @@ export default function SingleCard({ post, clicked }) {
   let postedDate = new Date(post.date_added)
 
   return (
-    <Card sx={{ minWidth: 275 }} style={{ margin: "20px" }}>
+    <Card sx={{ minWidth: { xs: 312, md: 364 } }} style={{ margin: "10px" }}>
       <CardHeader subheader={`${postedDate.toDateString()}`}>
       </CardHeader>
       <Link onClick={() => clicked(true)} href={`${post._id}`}>

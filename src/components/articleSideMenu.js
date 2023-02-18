@@ -37,7 +37,7 @@ function ArticleSideMenu({ tags, viewCount }) {
                     {listTags.map((item, i) => {
                         return <Item key={i}>{"#"}{item.toLowerCase()}</Item>
                     })}
-                </>: <Item>"No Tags"</Item>}
+                </>: <Item>No Tags</Item>}
             </Stack>
             <Divider></Divider>
             <Stack marginTop={5}>

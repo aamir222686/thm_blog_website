@@ -2,7 +2,6 @@ import { Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import IconButton from '@mui/material/IconButton';
 import ShareIcon from '@mui/icons-material/Share';
 import { useEffect } from 'react';
@@ -26,7 +25,7 @@ function ArticleHero({ image, title, date, author, articleId }) {
                     }
             };
             addCount();
-    }, [])
+    }, [articleId])
 
     return (
         <Grid container sx={{
@@ -52,9 +51,6 @@ function ArticleHero({ image, title, date, author, articleId }) {
                         <Typography variant="body2" color="#a0d7d9">Author: {author.toUpperCase()}</Typography>
                     </Stack>
                     <Stack direction="row" marginTop={4} sx={{ display: "flex", width: "100%", justifyContent: "flex-end" }}>
-                        <IconButton aria-label="like">
-                            <FavoriteIcon />
-                        </IconButton>
                         <IconButton aria-label="share">
                             <ShareIcon />
                         </IconButton>

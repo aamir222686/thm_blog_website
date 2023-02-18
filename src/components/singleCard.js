@@ -10,9 +10,22 @@ import Button from '@mui/material/Button';
 import { CardHeader } from '@mui/material';
 import Link from 'next/link';
 
-export default function SingleCard({ post, clicked }) {
+// Share modal import
+import ShareModal from "../components/socialShare";
 
-  let postedDate = new Date(post.date_added)
+export default function SingleCard({ post, clicked }) {
+  let postedDate = new Date(post.date_added);
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    console.log("CLOSE TRIGGERED")
+    setOpen(false);
+  };
 
   return (
     <Card sx={{ minWidth: { xs: 312, md: 364 } }} style={{ margin: "10px" }}>
@@ -33,11 +46,12 @@ export default function SingleCard({ post, clicked }) {
         </Link>  
       </CardContent>
         <CardActions disableSpacing style={{display: "flex", justifyContent: "space-between"}}>
-          <IconButton aria-label="share">
+        <IconButton aria-label="share" onClick={handleOpen}>
             <ShareIcon sx={{color: "#a0d7d9"}}/>
           </IconButton>
         <Link onClick={() => clicked(true)} href={`${post._id}`}><Button sx={{color: "#a0d7d9"}} size="small">Continue Reading...</Button></Link>
       </CardActions>
+      <ShareModal postId={post._id} title={post.title} open={open} onClose={handleClose}/>
     </Card>
   );
 }

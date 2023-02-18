@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Container from '@mui/material/Container';
 import { Grid } from '@mui/material';
+import config from "../seo/config"
 
 // components import
 import Header from "../components/header";
@@ -8,7 +9,7 @@ import LoadingContentSpinner from "../components/loadingContentSpinner";
 import ArticleHero from "../components/articleHero";
 import ArticleSideMenu from '../components/articleSideMenu';
 
-export async function getServerSideProps(context) {  
+export async function getServerSideProps(context) {
     const { id } = context.query;
     let blogData = []
     const res = await fetch(`https://thm-backend-server.fly.dev/getPostsById?id=${id}`)
@@ -18,7 +19,7 @@ export async function getServerSideProps(context) {
     } else {
         console.log("ERROR")
     }
-  return { props: {blogData}}
+    return { props: {blogData}}
 }
 
 const SingleBlog = (props) => { 
@@ -36,6 +37,22 @@ const SingleBlog = (props) => {
                 <meta name="keywords" content={dataFromSsr[0].keywords} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.png" />
+                <meta charset="UTF-8"></meta>
+                <link rel="canonical" href={config.seoConfig.host + "/" + dataFromSsr[0]._id}></link>
+
+                {/* <!-- Open Graph / Facebook --> */}
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content={`${config.seoConfig.host}` + `/${dataFromSsr[0]._id}`}/>
+                <meta property="og:title" content={`${dataFromSsr[0].title}`}/>
+                <meta property="og:description" content={`${dataFromSsr[0].description}`}/>
+                <meta property="og:image" content={`${dataFromSsr[0].image}`}/>
+
+                {/* <!-- Twitter --/> */}
+                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:url" content={`${config.seoConfig.host}` + `/${dataFromSsr[0]._id}`}/>
+                <meta property="twitter:title" content={`${dataFromSsr[0].title}`}/>
+                <meta property="twitter:description" content={`${dataFromSsr[0].description}`}/>
+                <meta property="twitter:image" content={`${dataFromSsr[0].image}`}/>
             </Head>
             <Header></Header>
             {dataFromSsr && dataFromSsr.length > 0 ? 

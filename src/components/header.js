@@ -4,32 +4,39 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import Image from 'next/image';
 import headerImage from '../../public/thm-200.png';
 import Link from 'next/link';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemButton from '@mui/material/ListItemButton';
+import { Divider } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
 
 const pages = ['Blog', 'About'];
 
-function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+function Header() {
+  const [anchorElNav, setAnchorElNav] = React.useState(false);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
+  const handleOpenNavMenu = () => {
+    setAnchorElNav(true)
+  }
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+    setAnchorElNav(false)
+  }
 
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
-              <Toolbar disableGutters>
+        <Toolbar disableGutters>
                   <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>  
                     <Image style={{marginRight: "10px"}}  src={headerImage} alt="THM Main Logo" width={20}></Image>
                   </Box>
@@ -62,34 +69,60 @@ function ResponsiveAppBar() {
             >
               <MenuIcon />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page, i) => (
-                <MenuItem key={i} onClick={handleCloseNavMenu}>
-                  <Link href={`${page == "Blog"? "/" : page}`}><Typography textAlign="center">{page}</Typography></Link>
-                </MenuItem>
-              ))}
-            </Menu>
+            <SwipeableDrawer anchor="left" open={anchorElNav} onClose={handleCloseNavMenu} onOpen={handleOpenNavMenu}>
+              <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', minWidth: "60vw", height: "100%" }}>
+                <List>
+                  <ListItem>
+                    <ListItemButton href='/'>
+                      <Image style={{ marginRight: "10px" }} src={headerImage} alt="THM Main Logo" width={20}></Image>
+                      <Typography
+                        variant="h5"
+                        noWrap
+                        sx={{
+                          mr: 2,
+                          display: { xs: 'flex', md: 'none' },
+                          flexGrow: 1,
+                          fontFamily: 'monospace',
+                          fontWeight: 700,
+                          letterSpacing: '.3rem',
+                          color: 'inherit',
+                          textDecoration: 'none',
+                        }}
+                      >
+                        THM
+                      </Typography>
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+                <Divider></Divider>
+                <List>
+                  <ListItem>
+                    <ListItemButton href='/'>
+                      <ListItemIcon>
+                        <HomeIcon sx={{color: "#a0d7d9"}} />
+                      </ListItemIcon>
+                      <ListItemText primary="Home" />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+                <Divider></Divider>
+                  <List>
+                  <ListItem>
+                    <ListItemButton href='/about'>
+                      <ListItemIcon>
+                        <InfoIcon sx={{color: "#a0d7d9"}}/>
+                      </ListItemIcon>
+                      <ListItemText primary="About" />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+                <Divider></Divider>
+              </Box>
+            </SwipeableDrawer>
           </Box>
-                  <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-                    <Image style={{marginRight: "10px"}}  src={headerImage} alt="THM Main Logo" width={20}></Image>
-                  </Box>
+                <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, ml: -4 }}>
+                  <Image style={{marginRight: "10px"}}  src={headerImage} alt="THM Main Logo" width={20}></Image>
+                </Box>
           
               <Typography
                 variant="h5"
@@ -103,24 +136,42 @@ function ResponsiveAppBar() {
                   letterSpacing: '.3rem',
                   color: 'inherit',
                   textDecoration: 'none',
+                  marginLeft: "-10px"
                 }}
               >
                 <Link href={"/"}>THM</Link>
               </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} justifyContent={'flex-end'}>
-            {pages.map((page, i) => (
-              <Link key={i} href={`${page == "Blog"? "/" : page}`}><Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button></Link>
-            ))}
+            <Link href="/">
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'flex', alignItems: "center", justifyContent: "center", marginRight: "20px" }}>
+                <HomeIcon sx={{ marginRight: "5px", "fontSize": "1.2rem", color: "#a0d7d9" }} />
+                <Typography sx={{
+                  flexGrow: 1,
+                  fontFamily: 'monospace',
+                  fontWeight: 700,
+                  letterSpacing: '.3rem'
+                }}>
+                  Home
+                </Typography>
+              </Button>
+            </Link>
+            <Link href="about">
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px" }}>
+                <InfoIcon sx={{ marginRight: "5px", "fontSize": "1.2rem", color: "#a0d7d9" }} /> 
+                <Typography sx={{
+                  flexGrow: 1,
+                  fontFamily: 'monospace',
+                  fontWeight: 700,
+                  letterSpacing: '.3rem'
+                }}>
+                  About
+                </Typography>
+              </Button>
+            </Link>  
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Header;

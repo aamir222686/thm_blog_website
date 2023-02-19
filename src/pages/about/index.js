@@ -49,9 +49,6 @@ export default function About() {
               The Honest Machine is a technology blog that provides honest and insightful articles about trending technologies. Our mission is to keep you informed and up-to-date with the latest news, gadget reviews, software updates, and more.
             </Typography>
             <Typography variant="body1" sx={{marginBottom: 2}} >
-              Our team of experienced writers and tech enthusiasts are dedicated to bringing you the most accurate and relevant information, and we strive to present our content in an accessible and engaging way.
-            </Typography>
-            <Typography variant="body1" sx={{marginBottom: 2}} >
               Whether you are a seasoned tech veteran or a curious beginner, we welcome you to join our community and explore the exciting world of technology with us.
             </Typography>
           </Grid>

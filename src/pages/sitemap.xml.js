@@ -1,4 +1,4 @@
-const EXTERNAL_DATA_URL = 'https://thehonestmachine.com/';
+const EXTERNAL_DATA_URL = 'https://thehonestmachine.com';
 
 function generateSiteMap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -29,7 +29,7 @@ function SiteMap() {
 
 export async function getServerSideProps({ res }) {
   // We make an API call to gather the URLs for our site
-  const request = await fetch(`https://thm-backend-server.fly.dev/getPostsByCount?count=${12}`);
+  const request = await fetch(`https://thm-backend-server.fly.dev/getPostsByCount?count=${100}`);
   const posts = await request.json();
 
   // We generate the XML sitemap with the posts data

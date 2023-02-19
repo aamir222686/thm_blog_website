@@ -39,7 +39,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
         <meta name="keywords" content={config.seoConfig.keywords} />
-        <meta charset="UTF-8"></meta>
+        <meta charSet="UTF-8"></meta>
         <link rel="canonical" href={config.seoConfig.host}></link>
         <meta name="robots" content="index, follow"></meta>
         <meta property="og:image:alt" content="The Honest Machine Logo"/>

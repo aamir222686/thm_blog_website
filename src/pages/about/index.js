@@ -17,7 +17,7 @@ export default function About() {
         <meta name="description" content="The Honest Machine - About Page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
-        <meta charset="UTF-8"></meta>
+        <meta charSet="UTF-8"></meta>
         <link rel="canonical" href={config.seoConfig.host + "/" + "about"}></link>
         <meta property="og:image:alt" content="The Honest Machine Logo"/>
         

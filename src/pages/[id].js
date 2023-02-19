@@ -32,12 +32,12 @@ const SingleBlog = (props) => {
     return (
         <>
             <Head>
-                <title>THM - {dataFromSsr[0].title}</title>
+                <title>{`THM - ${dataFromSsr[0].title}`}</title>
                 <meta name="description" content={dataFromSsr[0].description} />
                 <meta name="keywords" content={dataFromSsr[0].keywords} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.png" />
-                <meta charset="UTF-8"></meta>
+                <meta charSet="UTF-8"></meta>
                 <link rel="canonical" href={config.seoConfig.host + "/" + dataFromSsr[0]._id}></link>
 
                 {/* <!-- Open Graph / Facebook --> */}

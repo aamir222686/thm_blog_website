@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Container from '@mui/material/Container';
 import { Grid } from '@mui/material';
-import config from "../seo/config";
+import config from "../../seo/config";
 
 // components import
-import Header from "../components/header";
-import LoadingContentSpinner from "../components/loadingContentSpinner";
-import ArticleHero from "../components/articleHero";
-import ArticleSideMenu from '../components/articleSideMenu';
+import Header from "../../components/header";
+import LoadingContentSpinner from "../../components/loadingContentSpinner";
+import ArticleHero from "../../components/articleHero";
+import ArticleSideMenu from '../../components/articleSideMenu';
 
 export async function getServerSideProps(context) {
     const { id } = context.query;
@@ -67,7 +67,7 @@ const SingleBlog = (props) => {
                     </Grid>
                     <Grid container sx={{ marginTop: "20px" }}>
                         <Grid item xs={12} md={9} sx={{padding: "20px"}}>
-                            <div dangerouslySetInnerHTML={createMarkup()}/>
+                            <div style={{textAlign: "justify", fontFamily: "Helvetica", textJustify: "inter-word"}} dangerouslySetInnerHTML={createMarkup()}/>
                         </Grid>
                         <Grid item xs={12} md={3} sx={{padding: "20px"}}>
                             <ArticleSideMenu tags={dataFromSsr[0].keywords} viewCount={dataFromSsr[0].num_of_views}></ArticleSideMenu>
@@ -76,7 +76,7 @@ const SingleBlog = (props) => {
                 </Container> :
                 <LoadingContentSpinner/>
             }
-            
+            {/* ,"Helvetica","Arial","sans-serif" */}
         </>
     )
 }

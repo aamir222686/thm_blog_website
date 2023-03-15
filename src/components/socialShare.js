@@ -41,11 +41,12 @@ const style = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    backgroundColor: "rgba(82,0,255,1)"
 };
 
 export default function ShareModal(props) {
-    const url = `${config.seoConfig.host}/${props.postId}`;
+    const url = `${config.seoConfig.host}/post/${props.postId}`;
     const title = "THM | " + props.title;
 
     const [snackBar, setSnackBar] = React.useState(false);

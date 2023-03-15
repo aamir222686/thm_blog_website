@@ -34,7 +34,7 @@ function Header() {
   }
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
                   <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>  
@@ -49,7 +49,7 @@ function Header() {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
@@ -84,7 +84,7 @@ function Header() {
                           flexGrow: 1,
                           fontFamily: 'monospace',
                           fontWeight: 700,
-                          letterSpacing: '.3rem',
+                          letterSpacing: '.1rem',
                           color: 'inherit',
                           textDecoration: 'none',
                         }}
@@ -99,20 +99,76 @@ function Header() {
                   <ListItem>
                     <ListItemButton href='/'>
                       <ListItemIcon>
-                        <HomeIcon sx={{color: "#a0d7d9"}} />
+                        <HomeIcon sx={{color: "white"}} />
                       </ListItemIcon>
-                      <ListItemText primary="Home" />
+                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="Home" />
                     </ListItemButton>
                   </ListItem>
                 </List>
                 <Divider></Divider>
-                  <List>
+
+                <List>
+                  <ListItem>
+                    <ListItemButton href='/technology'>
+                      <ListItemIcon>
+                        <InfoIcon sx={{color: "white"}}/>
+                      </ListItemIcon>
+                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="Technology" />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+                <Divider></Divider>
+                <List>
+                  <ListItem>
+                    <ListItemButton href='/science'>
+                      <ListItemIcon>
+                        <InfoIcon sx={{color: "white"}}/>
+                      </ListItemIcon>
+                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="Science" />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+                <Divider></Divider>
+                <List>
+                  <ListItem>
+                    <ListItemButton href='/entertainment'>
+                      <ListItemIcon>
+                        <InfoIcon sx={{color: "white"}}/>
+                      </ListItemIcon>
+                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="Entertainment" />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+                <Divider></Divider>
+                <List>
+                  <ListItem>
+                    <ListItemButton href='/ai'>
+                      <ListItemIcon>
+                        <InfoIcon sx={{color: "white"}}/>
+                      </ListItemIcon>
+                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="AI" />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+                <Divider></Divider>
+                <List>
+                  <ListItem>
+                    <ListItemButton href='/startup'>
+                      <ListItemIcon>
+                        <InfoIcon sx={{color: "white"}}/>
+                      </ListItemIcon>
+                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="Startup" />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+                <Divider></Divider>
+                                  <List>
                   <ListItem>
                     <ListItemButton href='/about'>
                       <ListItemIcon>
-                        <InfoIcon sx={{color: "#a0d7d9"}}/>
+                        <InfoIcon sx={{color: "white"}}/>
                       </ListItemIcon>
-                      <ListItemText primary="About" />
+                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="About" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -133,7 +189,7 @@ function Header() {
                   flexGrow: 1,
                   fontFamily: 'monospace',
                   fontWeight: 700,
-                  letterSpacing: '.3rem',
+                  letterSpacing: '.1rem',
                   color: 'inherit',
                   textDecoration: 'none',
                   marginLeft: "-10px"
@@ -143,26 +199,84 @@ function Header() {
               </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} justifyContent={'flex-end'}>
             <Link href="/">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'flex', alignItems: "center", justifyContent: "center", marginRight: "20px" }}>
-                <HomeIcon sx={{ marginRight: "5px", "fontSize": "1.2rem", color: "#a0d7d9" }} />
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'flex', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
                 <Typography sx={{
                   flexGrow: 1,
                   fontFamily: 'monospace',
                   fontWeight: 700,
-                  letterSpacing: '.3rem'
+                  letterSpacing: '.1rem'
                 }}>
                   Home
                 </Typography>
               </Button>
             </Link>
-            <Link href="about">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px" }}>
-                <InfoIcon sx={{ marginRight: "5px", "fontSize": "1.2rem", color: "#a0d7d9" }} /> 
+            <Link href="/technology">
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
                 <Typography sx={{
                   flexGrow: 1,
                   fontFamily: 'monospace',
                   fontWeight: 700,
-                  letterSpacing: '.3rem'
+                  letterSpacing: '.1rem'
+                }}>
+                  Technology
+                </Typography>
+              </Button>
+            </Link> 
+            <Link href="/science">
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+                <Typography sx={{
+                  flexGrow: 1,
+                  fontFamily: 'monospace',
+                  fontWeight: 700,
+                  letterSpacing: '.1rem'
+                }}>
+                  Science
+                </Typography>
+              </Button>
+            </Link> 
+            <Link href="/entertainment">
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+                <Typography sx={{
+                  flexGrow: 1,
+                  fontFamily: 'monospace',
+                  fontWeight: 700,
+                  letterSpacing: '.1rem'
+                }}>
+                  Entertainment
+                </Typography>
+              </Button>
+            </Link> 
+            <Link href="/ai">
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+                <Typography sx={{
+                  flexGrow: 1,
+                  fontFamily: 'monospace',
+                  fontWeight: 700,
+                  letterSpacing: '.1rem'
+                }}>
+                  AI
+                </Typography>
+              </Button>
+            </Link> 
+            <Link href="/startup">
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+                <Typography sx={{
+                  flexGrow: 1,
+                  fontFamily: 'monospace',
+                  fontWeight: 700,
+                  letterSpacing: '.1rem'
+                }}>
+                  Startup
+                </Typography>
+              </Button>
+            </Link> 
+            <Link href="/about">
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+                <Typography sx={{
+                  flexGrow: 1,
+                  fontFamily: 'monospace',
+                  fontWeight: 700,
+                  letterSpacing: '.1rem'
                 }}>
                   About
                 </Typography>

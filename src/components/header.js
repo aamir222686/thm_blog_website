@@ -34,7 +34,7 @@ function Header() {
   }
 
   return (
-    <AppBar position="static" sx={{background: "linear-gradient(90deg, rgba(56,0,134,1) 0%, rgba(56,0,139,1) 54%, rgba(26,0,81,1) 100%)"}}>
+    <AppBar position="static" sx={{background: "black"}}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
                   <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>  

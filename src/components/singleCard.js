@@ -47,7 +47,7 @@ export default function SingleCard({ post, clicked }) {
   }
 
   return (
-    <Card sx={{ minWidth: { xs: 312, md: 364 }, minHeight: "300px",margin: "10px",transition: "0.3s", boxShadow: "5px 5px 6px #5200ff", "&:hover": {boxShadow: "2px 2px 6px #5200ff"} }}>
+    <Card sx={{ minWidth: { xs: 312, md: 364 }, minHeight: "300px",margin: "10px",transition: "0.3s", boxShadow: "5px 5px 6px #5200ff", backgroundColor: "black", "&:hover": {boxShadow: "2px 2px 6px #5200ff"} }}>
       <CardHeader subheader={`${postedDate.toDateString()}`}>
       </CardHeader>
       <Link onClick={() => clicked(true)} href={`post/${post._id}`}>
@@ -61,7 +61,7 @@ export default function SingleCard({ post, clicked }) {
       <CardContent sx={{display: "flex", flexDirection: "column"}}>
           {categoryChip(post.category)}
         <Link onClick={() => clicked(true)} href={`post/${post._id}`}>
-          <Typography variant="h6" color="text.primary" sx={{paddingBottom: "10px", minHeight: "75px", textDecoration: "underline", textDecorationColor: "#5200ff", "&:hover": {textDecoration: "underline", textDecorationColor: "#a0d7d9"}}}>{post.title}</Typography>
+          <Typography variant="h6" color="text.primary" sx={{paddingBottom: "10px", minHeight: "75px", textDecoration: "underline", textDecorationColor: "#5200ff"}}>{post.title}</Typography>
           <Typography variant="body2" color="text.secondary" sx={{maxHeight: "100px", overflow: "hidden"}}>{post.description.slice(0,175)}...</Typography>
         </Link>  
       </CardContent>
@@ -69,7 +69,7 @@ export default function SingleCard({ post, clicked }) {
         <IconButton aria-label="share" onClick={handleOpen}>
             <ShareIcon sx={{color: "white"}}/>
           </IconButton>
-        <Link onClick={() => clicked(true)} href={`post/${post._id}`}><Button sx={{color: "white", textDecoration: "underline", textDecorationColor: "#5200ff"}} size="small">...Continue Reading</Button></Link>
+        <Link onClick={() => clicked(true)} href={`post/${post._id}`}><Button sx={{color: "white", textDecoration: "underline", textDecorationColor: "#5200ff"}} size="small">Read Article</Button></Link>
       </CardActions>
       <ShareModal postId={post._id} title={post.title} open={open} onClose={handleClose}/>
     </Card>

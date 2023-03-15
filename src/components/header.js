@@ -70,7 +70,7 @@ function Header() {
               <MenuIcon />
             </IconButton>
             <SwipeableDrawer anchor="left" open={anchorElNav} onClose={handleCloseNavMenu} onOpen={handleOpenNavMenu}>
-              <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', minWidth: "60vw", height: "100%" }}>
+              <Box sx={{ width: '100%', maxWidth: 360, bgcolor: "black", minWidth: "60vw", height: "100%", backgroundImage: "repeating-radial-gradient( circle at 0 0, transparent 0, #000000 5px ), repeating-linear-gradient( #120038, #120038 )", opacity: 1 }}>
                 <List>
                   <ListItem>
                     <ListItemButton href='/'>
@@ -98,10 +98,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/'>
-                      <ListItemIcon>
-                        <HomeIcon sx={{color: "white"}} />
-                      </ListItemIcon>
-                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="Home" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="Home" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -110,10 +107,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/technology'>
-                      <ListItemIcon>
-                        <InfoIcon sx={{color: "white"}}/>
-                      </ListItemIcon>
-                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="Technology" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="Technology" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -121,10 +115,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/science'>
-                      <ListItemIcon>
-                        <InfoIcon sx={{color: "white"}}/>
-                      </ListItemIcon>
-                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="Science" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="Science" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -132,10 +123,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/entertainment'>
-                      <ListItemIcon>
-                        <InfoIcon sx={{color: "white"}}/>
-                      </ListItemIcon>
-                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="Entertainment" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="Entertainment" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -143,10 +131,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/ai'>
-                      <ListItemIcon>
-                        <InfoIcon sx={{color: "white"}}/>
-                      </ListItemIcon>
-                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="AI" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="AI" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -154,10 +139,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/startup'>
-                      <ListItemIcon>
-                        <InfoIcon sx={{color: "white"}}/>
-                      </ListItemIcon>
-                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="Startup" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="Startup" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -165,10 +147,7 @@ function Header() {
                                   <List>
                   <ListItem>
                     <ListItemButton href='/about'>
-                      <ListItemIcon>
-                        <InfoIcon sx={{color: "white"}}/>
-                      </ListItemIcon>
-                      <ListItemText sx={{textDecoration: "underline", textDecorationColor: "#5200ff"}} primary="About" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="About" />
                     </ListItemButton>
                   </ListItem>
                 </List>

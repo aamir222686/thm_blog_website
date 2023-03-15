@@ -38,11 +38,11 @@ const SingleBlog = (props) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.png" />
                 <meta charSet="UTF-8"></meta>
-                <link rel="canonical" href={config.seoConfig.host + "/" + dataFromSsr[0]._id}></link>
+                <link rel="canonical" href={config.seoConfig.host+ "/post" + "/" + dataFromSsr[0]._id}></link>
 
                 {/* <!-- Open Graph / Facebook --> */}
                 <meta property="og:type" content="article"/>
-                <meta property="og:url" content={`${config.seoConfig.host}` + `/${dataFromSsr[0]._id}`}/>
+                <meta property="og:url" content={`${config.seoConfig.host}` + "/post" + `/${dataFromSsr[0]._id}`}/>
                 <meta property="og:title" content={`${dataFromSsr[0].title}`}/>
                 <meta property="og:description" content={`${dataFromSsr[0].description}`}/>
                 <meta property="og:image" content={`${dataFromSsr[0].image}`}/>
@@ -50,7 +50,7 @@ const SingleBlog = (props) => {
 
                 {/* <!-- Twitter --/> */}
                 <meta property="twitter:card" content="summary_large_image"/>
-                <meta property="twitter:url" content={`${config.seoConfig.host}` + `/${dataFromSsr[0]._id}`}/>
+                <meta property="twitter:url" content={`${config.seoConfig.host}` + "/post" + `/${dataFromSsr[0]._id}`}/>
                 <meta property="twitter:title" content={`${dataFromSsr[0].title}`}/>
                 <meta property="twitter:description" content={`${dataFromSsr[0].description}`}/>
                 <meta property="twitter:image" content={`${dataFromSsr[0].image}`} />

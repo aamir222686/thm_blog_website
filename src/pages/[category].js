@@ -65,7 +65,7 @@ const CategoryPage = (props) => {
             <Box sx={{ minHeight: "100px", padding: "20px", display: "flex", flexDirection: "column", justifyContent: "center", background: "linear-gradient(90deg, rgba(56,0,134,1) 0%, rgba(56,0,139,1) 54%, rgba(26,0,81,1) 100%)" }}>
                 <Container maxWidth="xl">
                     <Typography variant="body1" sx={{fontWeight: "100"}} >All Posts Tagged : </Typography>
-                    <Typography variant="h4" sx={{fontWeight: "600"}}>{ posts[0].category.toUpperCase()}</Typography>
+                    <Typography variant="h4" sx={{fontWeight: "600", fontFamily: "fantasy"}}>{ posts[0].category.toUpperCase()}</Typography>
                 </Container>
                 </Box>
             <Container maxWidth="xl">

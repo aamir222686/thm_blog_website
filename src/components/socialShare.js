@@ -42,7 +42,8 @@ const style = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(82,0,255,1)"
+    backgroundImage: "repeating-radial-gradient( circle at 0 0, transparent 0, #000000 10px ), repeating-linear-gradient( #120038, #120038 )",
+    backgroundColor: "#000000",
 };
 
 export default function ShareModal(props) {

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Container from '@mui/material/Container';
 import Header from "../components/header";
+import TopArticlesView from '../components/topArticlesView';
 import SingleCard from '@/components/singleCard';
 import Grid from '@mui/material/Grid';
 import { useState, useEffect } from 'react';
@@ -17,18 +18,19 @@ export default function Home() {
   
   useEffect(() => {
     const fetchPostData = async () => {
-            setLoading(true)
-            const res = await fetch(`https://thm-backend-server.fly.dev/getPostsByCount?count=${12}`)
-            if (res.status == 200) {
-              let data = await res.json()
-              setPosts(data)
-              setLoading(false)
-            } else {
-              setError("Hmmmm...!!! Something went wrong....")
-              setLoading(false)
-            }
-        };
-        fetchPostData();
+      setLoading(true)
+      const res = await fetch(`https://thm-backend-server.fly.dev/getPostsByCount?count=${12}`)
+      if (res.status == 200) {
+        let getMostViewedArr = [];
+        const data = await res.json();
+        setPosts(data)
+        setLoading(false)
+      } else {
+        setError("Hmmmm...!!! Something went wrong....")
+        setLoading(false)
+      }
+  };
+  fetchPostData();
     }, [])
 
   return (
@@ -63,6 +65,7 @@ export default function Home() {
         <meta property="og:image:height" content="400" />
       </Head>
       <Header></Header>
+      <TopArticlesView posts={posts}></TopArticlesView>
       <Container maxWidth="xl">
         {!loading ? <>
            {error.length < 1 ?

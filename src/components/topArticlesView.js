@@ -18,10 +18,11 @@ function TopArticlesView({ posts }) {
                 >
                 <Container maxWidth="xl" sx={{padding: "20px"}}>
                         <Typography variant='h3' sx={{
-                            fontFamily: "fantasy",
+                            fontFamily: "Anton, sans-serif",
+                            letterSpacing: "5px",
                             textShadow: "7px 7px 2px #5200ff",
                             position: "relative",
-                            top: "25px"
+                            top: "20px"
                         }}>Featured Article</Typography>
                         <HomePageHero image={posts[0].image} title={posts[0].title} date={ posts[0].date_added} author={ posts[0].author} articleId={posts[0]._id} description={posts[0].description}/>
                 </Container>

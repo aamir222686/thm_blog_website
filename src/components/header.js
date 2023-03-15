@@ -34,8 +34,8 @@ function Header() {
   }
 
   return (
-    <AppBar position="static" >
-      <Container maxWidth="xl">
+    <AppBar position="static" sx={{background: "linear-gradient(90deg, rgba(56,0,134,1) 0%, rgba(56,0,139,1) 54%, rgba(26,0,81,1) 100%)"}}>
+      <Container maxWidth="xl" >
         <Toolbar disableGutters>
                   <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>  
                     <Image style={{marginRight: "10px"}}  src={headerImage} alt="THM Main Logo" width={20}></Image>

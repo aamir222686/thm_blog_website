@@ -57,8 +57,8 @@ function ArticleHero({ image, title, date, author, articleId }) {
                     backgroundSize: "cover"
                 }}>
                 </Grid>
-                <Grid item xs={12} md={6} sx={{padding: "40px 40px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
-                    <Typography sx={{ typography: { xs: 'h5', md: 'h3' }, textDecoration: "underline", textDecorationColor: "#5200ff" }} color="text.primary" marginBottom={1}>{title}</Typography>
+                <Grid item xs={12} md={6} sx={{padding: "40px 40px", display: "flex", flexDirection: "column", justifyContent: "center", backgroundColor: "black"}}>
+                    <Typography sx={{ typography: { xs: 'h4', md: 'h3' }, textDecoration: "underline", textDecorationColor: "#5200ff" }} color="text.primary" marginBottom={1}>{title}</Typography>
                     <Divider />
                     <Stack direction="row" marginTop={2} sx={{display: "flex", justifyContent: "space-between"}}>
                         <Typography variant="body2">{postedDate.toDateString()}</Typography>

@@ -6,9 +6,9 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
 const CountView = styled(Paper)(({ theme }) => ({
-  backgroundColor: '#a0d7d9',
+  backgroundColor: 'black',
   padding: theme.spacing(1),
-    color: "black",
+    color: "white",
     fontFamily: "monospace",
 }));
 
@@ -19,7 +19,8 @@ function ArticleSideMenu({ tags, viewCount }) {
         <Grid item xs={12} md={12} sx={{
                 backgroundColor: "#272727",
                 borderRadius: "10px",
-                padding: "20px"
+                padding: "20px",
+                background: "linear-gradient(90deg, rgba(56,0,134,1) 0%, rgba(56,0,139,1) 54%, rgba(26,0,81,1) 100%)"
         }}>
             <Grid maxWidth="100%" >
                 <Typography variant="h5" color="text.primary">Tags</Typography>
@@ -27,7 +28,7 @@ function ArticleSideMenu({ tags, viewCount }) {
                 <Grid sx={{display: "flex", flexWrap: "wrap", marginTop: "20px", marginBottom: "20px"}}>
                 {listTags.length > 0 ? <>
                     {listTags.map((item, i) => {
-                        return <Grid sx={{display: "flex", backgroundColor: "#1A2027", width: "fit-content", margin:"5px", padding: "10px", color: "#a0d7d9", fontFamily: "monospace", cursor: "pointer"}} key={i}>{"#"}{item.toLowerCase()}</Grid>
+                        return <Grid sx={{display: "flex", backgroundColor: "#1A2027", width: "fit-content", margin:"5px", padding: "10px", color: "white", fontFamily: "monospace", cursor: "pointer"}} key={i}>{"#"}{item.toLowerCase()}</Grid>
                     })}
                 </>: <Grid sx={{display: "flex", flexWrap: "wrap", marginTop: "20px", marginBottom: "20px"}}>No Tags</Grid>}
                 </Grid>

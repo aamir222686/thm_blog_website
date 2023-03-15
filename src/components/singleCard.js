@@ -30,19 +30,19 @@ export default function SingleCard({ post, clicked }) {
 
   const categoryChip = (category) => {
     if (category == "startup") {
-      return <a style={{justifySelf: "flex-end", alignSelf: "flex-end"}} href={`/${category}`}><Chip sx={{ textTransform: "capitalize", cursor: "pointer", justifySelf: "flex-end", alignSelf: "flex-end", margin: "10px", fontSize: "0.7rem", fontWeight: "bold", backgroundColor: "darkcyan", color: "white", borderRadius: 0}} label={`${category}`} variant="filled" size="small" /></a>
+      return <a style={{justifySelf: "flex-end", alignSelf: "flex-end"}} href={`/${category}`}><Chip sx={{ textTransform: "capitalize", cursor: "pointer", justifySelf: "flex-end", alignSelf: "flex-end", margin: "10px", fontSize: "0.7rem", fontWeight: "bold", backgroundColor: "#5200ff", color: "white", borderRadius: 0}} label={`${category}`} variant="filled" size="small" /></a>
     }
     if (category == "technology") {
-      return <a style={{justifySelf: "flex-end", alignSelf: "flex-end"}} href={`/${category}`}><Chip sx={{ textTransform: "capitalize", cursor: "pointer", justifySelf: "flex-end", alignSelf: "flex-end", margin: "10px", fontSize: "0.7rem", fontWeight: "bold", backgroundColor: "blue", color: "white", borderRadius: 0}} label={`${category}`} variant="filled" size="small" /></a>
+      return <a style={{justifySelf: "flex-end", alignSelf: "flex-end"}} href={`/${category}`}><Chip sx={{ textTransform: "capitalize", cursor: "pointer", justifySelf: "flex-end", alignSelf: "flex-end", margin: "10px", fontSize: "0.7rem", fontWeight: "bold", backgroundColor: "#5200ff", color: "white", borderRadius: 0}} label={`${category}`} variant="filled" size="small" /></a>
     }
     if (category == "ai") {
-      return <a style={{justifySelf: "flex-end", alignSelf: "flex-end"}} href={`/${category}`}><Chip sx={{ textTransform: "capitalize", cursor: "pointer", justifySelf: "flex-end", alignSelf: "flex-end", margin: "10px", fontSize: "0.7rem", fontWeight: "bold", backgroundColor: "darkred", color: "white", borderRadius: 0}} label={`${category}`} variant="filled" size="small" /></a>
+      return <a style={{justifySelf: "flex-end", alignSelf: "flex-end"}} href={`/${category}`}><Chip sx={{ textTransform: "capitalize", cursor: "pointer", justifySelf: "flex-end", alignSelf: "flex-end", margin: "10px", fontSize: "0.7rem", fontWeight: "bold", backgroundColor: "#5200ff", color: "white", borderRadius: 0}} label={`${category}`} variant="filled" size="small" /></a>
     }
     if (category == "science") {
-      return <a style={{justifySelf: "flex-end", alignSelf: "flex-end"}} href={`/${category}`}><Chip sx={{ textTransform: "capitalize", cursor: "pointer", justifySelf: "flex-end", alignSelf: "flex-end", margin: "10px", fontSize: "0.7rem", fontWeight: "bold", backgroundColor: "lightyellow", color: "black", borderRadius: 0}} label={`${category}`} variant="filled" size="small" /></a>
+      return <a style={{justifySelf: "flex-end", alignSelf: "flex-end"}} href={`/${category}`}><Chip sx={{ textTransform: "capitalize", cursor: "pointer", justifySelf: "flex-end", alignSelf: "flex-end", margin: "10px", fontSize: "0.7rem", fontWeight: "bold", backgroundColor: "#5200ff", color: "white", borderRadius: 0}} label={`${category}`} variant="filled" size="small" /></a>
     }
     if (category == "entertainment") {
-      return <a style={{justifySelf: "flex-end", alignSelf: "flex-end"}} href={`/${category}`}><Chip sx={{ textTransform: "capitalize", cursor: "pointer", justifySelf: "flex-end", alignSelf: "flex-end", margin: "10px", fontSize: "0.7rem", fontWeight: "bold", backgroundColor: "orange", color: "black", borderRadius: 0}} label={`${category}`} variant="filled" size="small" /></a>
+      return <a style={{justifySelf: "flex-end", alignSelf: "flex-end"}} href={`/${category}`}><Chip sx={{ textTransform: "capitalize", cursor: "pointer", justifySelf: "flex-end", alignSelf: "flex-end", margin: "10px", fontSize: "0.7rem", fontWeight: "bold", backgroundColor: "#5200ff", color: "white", borderRadius: 0}} label={`${category}`} variant="filled" size="small" /></a>
     }
   }
 

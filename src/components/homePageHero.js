@@ -44,8 +44,8 @@ function HomePageHero({ image, title, date, author, articleId, description }) {
                     <Link href={`post/${articleId}`}><Typography sx={{ typography: { xs: 'h4', md: 'h4' }, textDecoration: "underline", textDecorationColor: "#5200ff" }} color="text.primary" marginBottom={1}>{title}</Typography></Link>
                     <Divider />
                     <Stack direction="row" marginTop={2} sx={{display: "flex", justifyContent: "space-between"}}>
-                        <Typography variant="body2">{postedDate.toDateString()}</Typography>
-                        <Typography variant="body2">Author: {author.toUpperCase()}</Typography>
+                        <Typography variant="body2" sx={{fontFamily: "Anton, sans-serif",letterSpacing: "2px",textShadow: "2px 2px 2px #5200ff"}}>{postedDate.toDateString()}</Typography>
+                        <Typography variant="body2" sx={{fontFamily: "Anton, sans-serif",letterSpacing: "2px",textShadow: "2px 2px 2px #5200ff"}}>Author: {author.toUpperCase()}</Typography>
                     </Stack>
                     <Stack direction="row" marginTop={2} sx={{display: "flex", justifyContent: "space-between"}}>
                             <Typography variant="body2">{description}</Typography>
@@ -54,7 +54,7 @@ function HomePageHero({ image, title, date, author, articleId, description }) {
                         <IconButton aria-label="share" onClick={handleOpen}>
                             <ShareIcon />
                         </IconButton>
-                        <Link href={`post/${articleId}`}><Button sx={{color: "white", textDecoration: "underline", textDecorationColor: "#5200ff"}} size="small">Read Article</Button></Link>
+                        <Link href={`post/${articleId}`}><Button sx={{color: "white", fontFamily: "Anton, sans-serif",letterSpacing: "2px",textShadow: "2px 2px 2px #5200ff", fontSize: "1rem"}} size="small">Read Article</Button></Link>
                     </Stack>
                 <ShareModal postId={articleId} title={title} open={open} onClose={handleClose}/>
                 </Grid>

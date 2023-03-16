@@ -71,7 +71,7 @@ export default function SingleCard({ post, clicked }) {
         <IconButton aria-label="share" onClick={handleOpen}>
             <ShareIcon sx={{color: "white"}}/>
           </IconButton>
-        <Link href={`post/${post._id}`}><Button sx={{color: "white", textDecoration: "underline", textDecorationColor: "#5200ff"}} size="small">Read Article</Button></Link>
+        <Link href={`post/${post._id}`}><Button sx={{color: "white", fontFamily: "Anton, sans-serif",letterSpacing: "2px",textShadow: "2px 2px 2px #5200ff"}} size="small">Read Article</Button></Link>
         {/* <Link onClick={() => clicked(true)} href={`post/${post._id}`}><Button sx={{color: "white", textDecoration: "underline", textDecorationColor: "#5200ff"}} size="small">Read Article</Button></Link> */}
       </CardActions>
       <ShareModal postId={post._id} title={post.title} open={open} onClose={handleClose}/>

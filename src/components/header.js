@@ -98,7 +98,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/'>
-                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="Home" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif",textShadow: "2px 2px 2px #5200ff"}} primary="Home" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -107,7 +107,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/technology'>
-                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="Technology" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif",textShadow: "2px 2px 2px #5200ff"}} primary="Technology" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -115,7 +115,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/science'>
-                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="Science" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif",textShadow: "2px 2px 2px #5200ff"}} primary="Science" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -123,7 +123,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/entertainment'>
-                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="Entertainment" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif",textShadow: "2px 2px 2px #5200ff"}} primary="Entertainment" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -131,7 +131,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/ai'>
-                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="AI" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif",textShadow: "2px 2px 2px #5200ff"}} primary="AI" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -139,7 +139,7 @@ function Header() {
                 <List>
                   <ListItem>
                     <ListItemButton href='/startup'>
-                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="Startup" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif",textShadow: "2px 2px 2px #5200ff"}} primary="Startup" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -147,7 +147,7 @@ function Header() {
                                   <List>
                   <ListItem>
                     <ListItemButton href='/about'>
-                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif"}} primary="About" />
+                      <ListItemText primaryTypographyProps={{fontSize: "1.2rem", textDecoration: "underline", textDecorationColor: "#5200ff", fontFamily: "Anton, sans-serif",textShadow: "2px 2px 2px #5200ff"}} primary="About" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -178,7 +178,7 @@ function Header() {
               </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} justifyContent={'flex-end'}>
             <Link href="/">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'flex', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'flex', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff",textShadow: "2px 2px 2px #5200ff" }}>
                 <Typography sx={{
                   flexGrow: 1,
                   fontFamily: 'monospace',
@@ -190,7 +190,7 @@ function Header() {
               </Button>
             </Link>
             <Link href="/technology">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff",textShadow: "2px 2px 2px #5200ff" }}>
                 <Typography sx={{
                   flexGrow: 1,
                   fontFamily: 'monospace',
@@ -202,7 +202,7 @@ function Header() {
               </Button>
             </Link> 
             <Link href="/science">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff",textShadow: "2px 2px 2px #5200ff" }}>
                 <Typography sx={{
                   flexGrow: 1,
                   fontFamily: 'monospace',
@@ -214,7 +214,7 @@ function Header() {
               </Button>
             </Link> 
             <Link href="/entertainment">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff",textShadow: "2px 2px 2px #5200ff" }}>
                 <Typography sx={{
                   flexGrow: 1,
                   fontFamily: 'monospace',
@@ -226,7 +226,7 @@ function Header() {
               </Button>
             </Link> 
             <Link href="/ai">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff",textShadow: "2px 2px 2px #5200ff" }}>
                 <Typography sx={{
                   flexGrow: 1,
                   fontFamily: 'monospace',
@@ -238,7 +238,7 @@ function Header() {
               </Button>
             </Link> 
             <Link href="/startup">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff",textShadow: "2px 2px 2px #5200ff" }}>
                 <Typography sx={{
                   flexGrow: 1,
                   fontFamily: 'monospace',
@@ -250,7 +250,7 @@ function Header() {
               </Button>
             </Link> 
             <Link href="/about">
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff" }}>
+              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', alignItems: "center", justifyContent: "center", marginRight: "20px", textDecoration: "underline", textDecorationColor: "#5200ff",textShadow: "2px 2px 2px #5200ff" }}>
                 <Typography sx={{
                   flexGrow: 1,
                   fontFamily: 'monospace',

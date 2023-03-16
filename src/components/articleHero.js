@@ -61,8 +61,8 @@ function ArticleHero({ image, title, date, author, articleId }) {
                     <Typography sx={{ typography: { xs: 'h4', md: 'h3' }, textDecoration: "underline", textDecorationColor: "#5200ff" }} color="text.primary" marginBottom={1}>{title}</Typography>
                     <Divider />
                     <Stack direction="row" marginTop={2} sx={{display: "flex", justifyContent: "space-between"}}>
-                        <Typography variant="body2">{postedDate.toDateString()}</Typography>
-                        <Typography variant="body2">Author: {author.toUpperCase()}</Typography>
+                        <Typography variant="body2" sx={{fontFamily: "Anton, sans-serif",letterSpacing: "2px",textShadow: "2px 2px 2px #5200ff"}}>{postedDate.toDateString()}</Typography>
+                        <Typography variant="body2" sx={{fontFamily: "Anton, sans-serif",letterSpacing: "2px",textShadow: "2px 2px 2px #5200ff"}}>Author: {author.toUpperCase()}</Typography>
                     </Stack>
                     <Stack direction="row" marginTop={4} sx={{ display: "flex", width: "100%", justifyContent: "flex-end" }}>
                         <IconButton aria-label="share" onClick={handleOpen}>

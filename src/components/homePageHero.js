@@ -26,8 +26,9 @@ function HomePageHero({ image, title, date, author, articleId, description }) {
     return (
         <Grid container sx={{
                 backgroundColor: "#272727",
-                borderRadius: "20px",
-                display: "flex"
+                borderRadius: "0px",
+                display: "flex",
+                boxShadow: "6px 6px 5px #5200ff"
             }}>
                 <Grid item xs={12} md={6} sx={{
                     display: "flex",

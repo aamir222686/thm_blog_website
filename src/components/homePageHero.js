@@ -41,7 +41,7 @@ function HomePageHero({ image, title, date, author, articleId, description }) {
                 </Grid>
             <Grid item xs={12} md={6} sx={{ padding: "40px 40px", display: "flex", flexDirection: "column", justifyContent: "center", backgroundColor: "black" }}>
                     
-                    <Link href={`post/${articleId}`}><Typography sx={{ typography: { xs: 'h3', md: 'h2' }, textDecoration: "underline", textDecorationColor: "#5200ff" }} color="text.primary" marginBottom={1}>{title}</Typography></Link>
+                    <Link href={`post/${articleId}`}><Typography sx={{ typography: { xs: 'h4', md: 'h2' }, textDecoration: "underline", textDecorationColor: "#5200ff" }} color="text.primary" marginBottom={1}>{title}</Typography></Link>
                     <Divider />
                     <Stack direction="row" marginTop={2} sx={{display: "flex", justifyContent: "space-between"}}>
                         <Typography variant="body2" sx={{fontFamily: "Anton, sans-serif",letterSpacing: "2px"}}>{postedDate.toDateString()}</Typography>

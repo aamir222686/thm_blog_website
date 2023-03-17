@@ -54,9 +54,9 @@ export default function SingleCard({ post, clicked }) {
       </Link>
       <CardContent sx={{display: "flex", flexDirection: "column"}}>
         <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <a style={{ justifySelf: "flex-end", alignSelf: "flex-end" }} href={`/${post.category}`}>
+          <Link style={{ justifySelf: "flex-end", alignSelf: "flex-end" }} href={`/${post.category}`}>
             <Chip sx={{ textTransform: "capitalize", cursor: "pointer", justifySelf: "flex-end", alignSelf: "flex-end", margin: "0px", fontSize: "0.7rem", fontWeight: "bold", backgroundColor: "#5200ff", color: "white", borderRadius: 0, position: "relative", top: "-30px" }} label={`${post.category}`} variant="filled" size="small" />
-          </a>
+          </Link>
         </Box>
         <Link href={`post/${post._id}`}>
           <Typography variant="h6" color="text.primary" sx={{paddingBottom: "10px", minHeight: "75px", textDecoration: "underline", textDecorationColor: "#5200ff"}}>{post.title}</Typography>

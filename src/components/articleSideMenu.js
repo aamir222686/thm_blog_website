@@ -28,13 +28,13 @@ function ArticleSideMenu({ tags, viewCount }) {
                 <Grid sx={{display: "flex", flexWrap: "wrap", marginTop: "20px", marginBottom: "20px"}}>
                 {listTags.length > 0 ? <>
                     {listTags.map((item, i) => {
-                        return <Grid sx={{display: "flex", backgroundColor: "#1A2027", width: "fit-content", margin:"5px", padding: "10px", color: "white", fontFamily: "monospace", cursor: "pointer"}} key={i}>{"#"}{item.toLowerCase()}</Grid>
+                        return <Grid sx={{display: "flex", backgroundColor: "#1A2027", width: "fit-content", margin:"5px", padding: "10px", color: "white", fontFamily: "monospace", cursor: "pointer", fontSize: "1rem"}} key={i}>{"#"}{item.toLowerCase()}</Grid>
                     })}
                 </>: <Grid sx={{display: "flex", flexWrap: "wrap", marginTop: "20px", marginBottom: "20px"}}>No Tags</Grid>}
                 </Grid>
             </Grid>
             <Divider></Divider>
-            <Stack marginTop={5}>
+            <Stack marginTop={5} sx={{fontFamily: "monospace", fontSize: "1rem"}}>
                 <CountView>
                     <b>Article Views: {viewCount}</b>
                 </CountView>

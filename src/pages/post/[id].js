@@ -89,7 +89,7 @@ const SingleBlog = (props) => {
                     </Grid>
                     <Grid container sx={{ marginTop: "20px" }}>
                         <Grid item xs={12} md={9} sx={{padding: "20px"}}>
-                            <div style={{textAlign: "justify", fontFamily: "Helvetica", textJustify: "inter-word"}} dangerouslySetInnerHTML={createMarkup()}/>
+                            <div style={{textAlign: "justify", fontFamily: "Helvetica", textJustify: "inter-word", fontSize: "22px", lineHeight: "1.5"}} className="article-main-content" dangerouslySetInnerHTML={createMarkup()}/>
                         </Grid>
                         <Grid item xs={12} md={3} sx={{padding: "20px"}}>
                             <ArticleSideMenu tags={dataFromSsr[0].keywords} viewCount={dataFromSsr[0].num_of_views}></ArticleSideMenu>

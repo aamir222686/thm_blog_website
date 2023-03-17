@@ -36,3 +36,29 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* custom styles */
+
+/* first-letter:float-left first-letter:mr-18 first-letter:font-polysans-mono first-letter:text-[117px] first-letter:font-medium first-letter:leading-[.72] dark:first-letter:text-franklin */
+
+.article-main-content p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.article-main-content p:first-child::first-letter {
+  float: left;
+  font-size: 44px;
+  margin-right: 10px;
+  margin-top: -1px;
+  font: medium;
+  font-family: Anton, sans-serif;
+  text-shadow: 7px 7px 2px #5200ff;
+}
+
+em {
+  color: #d0b9ff
+}

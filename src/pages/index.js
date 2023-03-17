@@ -67,7 +67,7 @@ export default function Home() {
       <Header></Header>
       <TopArticlesView posts={posts}></TopArticlesView>
       <Container maxWidth="xl">
-        {!loading ? <>
+        {/* {!loading ? <> */}
            {error.length < 1 ?
           <Grid container spacing={2}>
           {
@@ -76,7 +76,7 @@ export default function Home() {
             })
           } 
         </Grid> : error}
-        </>: <LoadingContentSpinner/>}
+        {/* </>: <LoadingContentSpinner/>} */}
       </Container>
     </>
   )

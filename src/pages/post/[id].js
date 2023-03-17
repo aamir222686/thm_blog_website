@@ -28,6 +28,23 @@ const SingleBlog = (props) => {
     function createMarkup() {
         return {__html: dataFromSsr[0].content};
     }
+
+    // Schema Data
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": dataFromSsr[0].title,
+      "image": [
+        dataFromSsr[0].image
+       ],
+      "datePublished": dataFromSsr[0].date_added,
+      "dateModified": dataFromSsr[0].date_added,
+      "author": [{
+          "@type": "Person",
+          "name": "THM",
+          "url": "https://thehonestmachine.com/about"
+        }]
+    }
     
     return (
         <>
@@ -58,6 +75,11 @@ const SingleBlog = (props) => {
                 <meta property="og:image:width" content="512" />
                 <meta property="og:image:height" content="512" />
                 <meta property="og:image:alt" content={`Image For - ${dataFromSsr[0].title}`} />
+
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+                />
             </Head>
             <Header></Header>
             {dataFromSsr && dataFromSsr.length > 0 ? 

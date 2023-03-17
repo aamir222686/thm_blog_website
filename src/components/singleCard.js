@@ -49,7 +49,7 @@ export default function SingleCard({ post, clicked }) {
   }
 
   return (
-    <Card sx={{ minWidth: { xs: 312, md: 364 }, minHeight: "300px",margin: "10px",transition: "0.3s", boxShadow: "5px 5px 6px #5200ff", backgroundColor: "black" }}>
+    <Card sx={{ minWidth: { xs: 312, md: 364 }, minHeight: "300px",margin: "10px", marginTop: "25px", transition: "0.3s", boxShadow: "5px 5px 6px #5200ff", backgroundColor: "black" }}>
       {/* <CardHeader subheader={`${postedDate.toDateString()}`}>
       </CardHeader> */}
       <Link href={`post/${post._id}`}>

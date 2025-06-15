@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://thehonestmachine.com
-
-# Sitemaps
-Sitemap: https://thehonestmachine.com/sitemap.xml
